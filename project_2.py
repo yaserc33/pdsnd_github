@@ -1,6 +1,4 @@
-from numpy import NaN
 import pandas as pd
-
 
 def ask_user():
     ''' ask user which city and filter they want
@@ -117,8 +115,6 @@ def ask_user():
                 '\nPlease enter integer number\n(1 by month , 2 by day 3 no filter)\n \n ')
 
     return city, filter_type
-##
-
 
 def data_frame_editor(city, filter_type):
     '''to load cvs file the user has chosen then to filter it
@@ -216,8 +212,6 @@ def data_frame_editor(city, filter_type):
         df = city_date[city_date['Start Time'].dt.day_name() ==
                        'Friday'].copy()
         return df
-##
-
 
 def stats(df, city):
     '''do stats on  dataframe "df"
@@ -290,7 +284,6 @@ def stats(df, city):
               int(df['Birth Year'].mean()),
               '\n')
 
-
 def row_data(df):
     ''' print row data first 5 then ask user if he want more '''
 
@@ -322,7 +315,6 @@ def row_data(df):
         except :
             print('\nif yes type \'Y\' ,if NO type \'N\':')
 
-
 def main():
     city, filter_type = ask_user()
     df = data_frame_editor(city, filter_type)
@@ -330,18 +322,14 @@ def main():
     row_data(df)
 
     # restart program
-    print('#' * 60, '\nDo you want to restart program?')
+    print("\n",'~' * 60, '\nDo you want to restart program?')
 
-    while True:
-        try:
-            end_q2 = input('\nif yes type \'Y\' ,if NO type \'N\': ')
-            if end_q2.lower() == 'y':
-                main()
-            elif end_q2.lower() == 'n':
-                break
+      
+    end_q2 = input('\nif yes enter \'Y\' ,if NO enter \'N\': ')
+    if end_q2.lower() == 'y':
+        main()
+    
 
-        except :
-            print('\nif yes type \'Y\' ,if NO type \'N\':')
 
 
 main()
