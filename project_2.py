@@ -317,18 +317,14 @@ def main():
     row_data(df)
 
     # restart program
-    print('#' * 60, '\nDo you want to restart program?')
+    print("\n",'~' * 60, '\nDo you want to restart program?')
 
-    while True:
-        try:
-            end_q2 = input('\nif yes type \'Y\' ,if NO type \'N\': ')
-            if end_q2.lower() == 'y':
-                main()
-            elif end_q2.lower() == 'n':
-                break
+      
+    end_q2 = input('\nif yes enter \'Y\' ,if NO enter \'N\': ')
+    if end_q2.lower() == 'y':
+        main()
+    
 
-        except :
-            print('\nif yes type \'Y\' ,if NO type \'N\':')
 
 
 main()
