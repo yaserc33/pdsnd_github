@@ -1,6 +1,5 @@
 import pandas as pd
 
-
 def ask_user():
     ''' ask user which city and filter they want
 
@@ -116,8 +115,6 @@ def ask_user():
                 '\nPlease enter integer number\n(1 by month , 2 by day 3 no filter)\n \n ')
 
     return city, filter_type
-##
-
 
 def data_frame_editor(city, filter_type):
     '''to load cvs file the user has chosen then to filter it
@@ -215,8 +212,6 @@ def data_frame_editor(city, filter_type):
         df = city_date[city_date['Start Time'].dt.day_name() ==
                        'Friday'].copy()
         return df
-##
-
 
 def stats(df, city):
     '''do stats on  dataframe "df" '''
@@ -284,7 +279,6 @@ def stats(df, city):
               int(df['Birth Year'].mean()),
               '\n')
 
-
 def row_data(df):
     ''' print row data first 5 then ask user if he want more '''
 
@@ -315,7 +309,6 @@ def row_data(df):
 
         except :
             print('\nif yes type \'Y\' ,if NO type \'N\':')
-
 
 def main():
     city, filter_type = ask_user()
