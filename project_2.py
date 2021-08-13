@@ -220,7 +220,12 @@ def data_frame_editor(city, filter_type):
 
 
 def stats(df, city):
-    '''do stats on  dataframe "df" '''
+    '''do stats on  dataframe "df"
+     input : int city : to do questions set 4  ,
+             int df : to load filterd dateframe
+    output: this funcation will print stats
+    
+     '''
 
     # answer of questions set 1
     print(
