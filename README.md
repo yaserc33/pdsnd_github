@@ -3,8 +3,7 @@
 2021-13-8
 
 ### Project Title
-bikeshare date interface
-
+bikeshare data explorer
 ### Description
 This program processes the data of three cities and then filters them based on the user's choice, and then shows you detailed statistics on the filtered data.
 
